@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	routes "github.com/andersonnerib/ms-golang/cmd/api/routes"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
 	router := gin.Default()
@@ -10,7 +14,7 @@ func main() {
 		})
 	})
 
-	PessoaRoutes(router)
+	routes.PessoaRoutes(router)
 
 	router.Run(":8080") // listen and serve on 0.0.0.0:8080
 }

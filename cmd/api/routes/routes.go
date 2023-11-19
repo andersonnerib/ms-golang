@@ -1,7 +1,7 @@
-package main
+package routes
 
 import (
-	controllers "command-line-argumentsC:\\Neri\\Go\\ms-golang\\cmd\\api\\controllers\\create-pessoa.go"
+	"github.com/andersonnerib/ms-golang/cmd/api/controllers"
 	"github.com/gin-gonic/gin"
 )
 
