@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	use_cases "command-line-argumentsC:\\Neri\\Go\\ms-golang\\internal\\use-cases\\createPessoa.go"
+	use_cases "github.com/andersonnerib/ms-golang/internal/use-cases"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,7 +24,7 @@ func CreatePessoa(ctx *gin.Context) {
 
 	useCase := use_cases.NewCreatePessoaUseCase()
 	err := useCase.Execute(body.name)
-	if err := ctx.ShouldBindJSON(&body); err != nil {
+	if err = ctx.ShouldBindJSON(&body); err != nil {
 		ctx.AbortWithStatusJSON(http.StatusBadRequest, gin.H{
 			"sucess": false,
 			"error":  err.Error(),

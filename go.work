@@ -1,3 +1,8 @@
 go 1.21.4
 
-use ./..
+use (
+    ./cmd/api
+    ./cmd/api/controllers
+    ./internal/entities
+    ./internal/use-cases
+)

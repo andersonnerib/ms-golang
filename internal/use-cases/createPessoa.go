@@ -1,6 +1,10 @@
 package use_cases
 
-import entities "command-line-argumentsC:\\Neri\\Go\\ms-golang\\internal\\entities\\pessoa.go"
+import (
+	"fmt"
+
+	entities "github.com/andersonnerib/ms-golang/internal/entities"
+)
 
 type createPessoaUseCase struct {
 	// recebe a instancia pra criar
@@ -17,7 +21,7 @@ func (u *createPessoaUseCase) Execute(name string) error {
 		return err
 	}
 
-	//persist
+	fmt.Println(pessoa)
 
 	return nil
 }
